@@ -983,7 +983,7 @@ async def main():
     logger.info(f"🤖 عدد الـ APIs المفعلة: {len(ai.apis)}")
     logger.info(f"📊 عدد المستخدمين المسجلين: {len(db.get_all_users())}")
     try:
-        await bot.infinity_polling(timeout=60, long_polling_timeout=60, skip_pending=True)
+        await bot.infinity_polling(timeout=60, skip_pending=True)
     except Exception as e:
         logger.error(f"خطأ في تشغيل البوت: {e}")
 
